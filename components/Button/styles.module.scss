@@ -1,0 +1,45 @@
+@import "styles/variables";
+
+.button {
+    height: 48px;
+    background-color: $blueColor;
+    border-radius: 10px;
+    color: $whiteColor;
+    border: 0;
+    padding: 0 30px;
+    font-size: 18px;
+
+    &:disabled,
+    &:disabled:hover {
+        background-color: #cdcbc4;
+        cursor: default;
+    }
+
+    &:hover {
+        background-color: lighten($blueColor, 2%);
+    }
+
+    &:active {
+        background-color: darken($blueColor, 1%);
+        transform: translateY(1px);
+    }
+}
+
+.buttonGreen {
+    background-color: $greenColor;
+
+    &:hover,
+    &:active {
+        background-color: darken($greenColor, 2%);
+    }
+}
+
+.buttonGray {
+    background-color: $grayColor;
+    color: $blackColor;
+
+    &:hover,
+    &:active {
+        background-color: darken($grayColor, 2%);
+    }
+}

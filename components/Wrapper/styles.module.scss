@@ -1,0 +1,12 @@
+@import "styles/variables";
+
+.wrapper {
+    width: 100%;
+    max-width: 650px;
+    min-height: 200px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 13px;
+    padding: 65px;
+}
