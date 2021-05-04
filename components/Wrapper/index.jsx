@@ -4,7 +4,9 @@ import styles from "./styles.module.scss";
 function Wrapper({ children, className }) {
     return (<>
         <div className={cn(className, styles.wrapper)}>
-            {children}
+            <div className={cn(className, styles.wrapperInner)}>
+                {children}
+            </div>
         </div>
     </>);
 }
