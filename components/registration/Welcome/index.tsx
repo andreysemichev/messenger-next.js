@@ -2,7 +2,7 @@ import Wrapper from "components/Wrapper";
 import Button from "components/Button";
 import styles from "./styles.module.scss";
 
-function Welcome() {
+const Welcome: React.FC = () => {
     return (<>
         <Wrapper className={styles.wrapper}>
             <h3 className={styles.title}>Welcome!</h3>

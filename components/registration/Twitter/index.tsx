@@ -2,7 +2,7 @@ import Wrapper from "components/Wrapper";
 import Button from "components/Button";
 import styles from "./styles.module.scss";
 
-function Twitter() {
+const Twitter: React.FC = () => {
     return (<>
         <Wrapper className={styles.wrapper}>
             <img className={styles.avatar} src="images/default_avatar.svg" alt="default avatar" />
