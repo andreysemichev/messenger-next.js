@@ -1,4 +1,4 @@
-import Welcome from "components/register/Welcome";
+import Welcome from "components/registration/Welcome";
 
 function Home() {
     return (<>
