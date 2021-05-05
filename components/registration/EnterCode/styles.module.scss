@@ -1,0 +1,42 @@
+@import "styles/variables";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.textField {
+    margin: 40px 5px;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    width: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img {
+    width: 15px;
+    margin-left: 20px;
+    fill: #fff;
+    color: #fff
+}
+
+.preloaderSvg {
+    width: 50px;
+    margin: 0 auto;
+}
