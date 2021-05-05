@@ -3,8 +3,11 @@ import Button from "components/Button";
 import Preloader from "components/Preloader";
 import styles from "./styles.module.scss";
 import { ChangeEvent, useState } from "react";
+import axios from "core/axios";
+import { useRouter } from "next/router";
 
 const EnterCode: React.FC = () => {
+    const router = useRouter();
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [codes, setCodes] = useState<Array<string>>(["", "", "", ""]);
     const isBtnDisabled = !codes.every(item => item);
@@ -24,8 +27,17 @@ const EnterCode: React.FC = () => {
         }
     }
 
-    const onSubmit = () => {
+    const onSubmit = async () => {
         setIsLoading(true);
+
+        try {
+            await axios.get("/");
+            router.push("/rooms");
+        } catch (error) {
+            console.log(error);
+        }
+
+        setIsLoading(false);
     }
 
     if (isLoading) {
