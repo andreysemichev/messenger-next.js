@@ -31,7 +31,8 @@ const EnterCode: React.FC = () => {
         setIsLoading(true);
 
         try {
-            await axios.get("/");
+            // запрос на сервер
+            // await axios.get("/");
             router.push("/rooms");
         } catch (error) {
             console.log(error);

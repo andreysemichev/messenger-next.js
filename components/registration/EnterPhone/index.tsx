@@ -2,7 +2,8 @@ import NumberFormat from "react-number-format";
 import Wrapper from "components/Wrapper";
 import Button from "components/Button";
 import styles from "./styles.module.scss";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { MainContext } from "pages";
 
 type valueState = {
     formattedValue: string
@@ -12,6 +13,7 @@ type valueState = {
 const EnterPhone: React.FC = () => {
     const [value, setValue] = useState<valueState>({} as valueState);
     const isBtnDisabled = !value.formattedValue || value.formattedValue.includes("_");
+    const {onNextStep} = useContext(MainContext);
 
     const handleUpdateValue = ({formattedValue, value}) => {
         setValue({formattedValue, value});
@@ -31,6 +33,7 @@ const EnterPhone: React.FC = () => {
             <Button 
                 className={styles.button}
                 disabled={isBtnDisabled}
+                onClick={onNextStep}
             > Next <img className={styles.img} src="/images/arrow.svg" alt="arrow" />
             </Button>
         </Wrapper>
