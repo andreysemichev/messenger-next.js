@@ -1,0 +1,84 @@
+@import "styles/variables";
+@import "styles/helpers";
+
+.back {
+    height: auto;
+    padding: 5px 15px;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;
+    margin-bottom: 20px;
+    color: $blackColor;
+
+    &:hover {
+        background-color: inherit;
+    }
+}
+
+.backImg {
+    width: 15px;
+    transform: rotate(180deg);
+    margin-right: 15px;
+    margin-bottom: 2px;
+}
+
+.userInfoLeft, .userInfoRight, .wrapperTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.avatar {
+    padding-right: 30px;
+
+    img {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+.user {
+    padding-right: 30px;
+}
+
+.fullName {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.counterWrapper {
+    text-align: center;
+    margin-right: 20px;
+    background-color: $whiteColor;
+    border-radius: 13px;
+    padding: 1px 15px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.counterNum {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.counterText {
+    color: lighten($blackColor, 30%);
+}
+
+.button {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    color: $blackColor;
+    background-color: inherit;
+    border: 2px solid lighten($blackColor, 30%);
+
+    &:hover {
+        background-color: inherit;
+    }
+}
