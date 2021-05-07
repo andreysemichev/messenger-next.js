@@ -56,38 +56,15 @@ const EnterCode: React.FC = () => {
             <Wrapper className={styles.wrapper}>
                 <h3 className={styles.title}>Enter your phone</h3>
                 <div className={styles.inputWrapper}>
-                    <input
+                    { codes.map((code, index) => <input
                         className={styles.textField}
                         maxLength={1}
+                        key={index}
                         type="tel"
-                        data-number={0}
+                        data-number={index}
                         onChange={handleChangeInput}
-                        value={codes[0]}
-                    />    
-                    <input
-                        className={styles.textField}
-                        maxLength={1}
-                        type="tel"
-                        data-number={1}
-                        onChange={handleChangeInput}
-                        value={codes[1]}
-                    /> 
-                    <input
-                        className={styles.textField}
-                        maxLength={1}
-                        type="tel"
-                        data-number={2}
-                        onChange={handleChangeInput}
-                        value={codes[2]}
-                    /> 
-                    <input
-                        className={styles.textField}
-                        maxLength={1}
-                        type="tel"
-                        data-number={3}
-                        onChange={handleChangeInput}
-                        value={codes[3]}
-                    />         
+                        value={code}
+                    /> )}     
                 </div>
                 
                 <Button 
